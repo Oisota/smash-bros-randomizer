@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Smash Bros Randomizer</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+	</head>
+	<body>
+		<section class="section">
+			<div class="columns">
+
+				<div class="column is-hidden-mobile">
+				</div>
+
+				<div class="column is-one-quarter box has-background-dark has-text-light">
+					<div class="columns is-mobile">
+						<div class="column is-one-third is-size-5 has-text-left">Damage:</div>
+						<div id="damage" class="column is-size-5 has-text-right"></div>
+					</div>
+					<div class="columns is-mobile">
+						<div class="column is-one-third is-size-5 has-text-left">Items:</div>
+						<div id="items" class="column is-size-5 has-text-right"></div>
+					</div>
+					<div class="columns is-mobile">
+						<div class="column is-one-third is-size-5 has-text-left">Time/Stock:</div>
+						<div id="lives" class="column is-size-5 has-text-right"></div>
+					</div>
+					<div class="columns is-mobile">
+						<div class="column is-one-third is-size-5 has-text-left">Character:</div>
+						<div id="character" class="column is-size-5 has-text-right"></div>
+					</div>
+					<div class="columns is-mobile">
+						<div class="column has-text-centered">
+							<button id="randomize" class="button is-primary is-large" type="button">Randomize</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="column is-hidden-mobile">
+				</div>
+
+			</div>
+		</section>
+		<script src="/main.js"></script>
+	</body>
+</html>
