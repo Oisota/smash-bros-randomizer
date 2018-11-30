@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
 	</head>
 	<body>
-		<section class="section">
+		<section id="app" class="section">
 			<div class="contianer">
 				<div class="columns">
 
@@ -18,23 +18,23 @@
 						<h1 class="title is-size-4 has-text-centered has-text-light">Smash Bros. Randomizer</h1>
 						<div class="columns is-mobile">
 							<div class="column is-5 is-size-5 has-text-right">Damage:</div>
-							<div id="damage" class="column is-size-5 has-text-left"></div>
+							<div id="damage" class="column is-size-5 has-text-left">{{damage}}</div>
 						</div>
 						<div class="columns is-mobile">
 							<div class="column is-5 is-size-5 has-text-right">Items:</div>
-							<div id="items" class="column is-size-5 has-text-left"></div>
+							<div id="items" class="column is-size-5 has-text-left">{{items}}</div>
 						</div>
 						<div class="columns is-mobile">
 							<div class="column is-5 is-size-5 has-text-right">Time/Stock:</div>
-							<div id="lives" class="column is-size-5 has-text-left"></div>
+							<div id="lives" class="column is-size-5 has-text-left">{{lives}}</div>
 						</div>
 						<div class="columns is-mobile">
 							<div class="column is-5 is-size-5 has-text-right">Character:</div>
-							<div id="character" class="column is-size-5 has-text-left"></div>
+							<div id="character" class="column is-size-5 has-text-left">{{character}}</div>
 						</div>
 						<div class="columns is-mobile">
 							<div class="column has-text-centered">
-								<button id="randomize" class="button is-primary is-large" type="button">Randomize</button>
+								<button v-on:click="randomizeValues" id="randomize" class="button is-primary is-large" type="button">Randomize</button>
 							</div>
 						</div>
 					</div>
@@ -45,6 +45,7 @@
 				</div>
 			</div>
 		</section>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>
