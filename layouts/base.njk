@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+		{% block styles %}
+		{% endblock %}
+	</head>
+	<body>
+		<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/">Smash Bros Randomizer</a>
+				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start">
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">Games</a>
+						<div class="navbar-dropdown">
+							{% for game in collections.games %}
+							<a class="navbar-item" href="/{{game.path|safe}}">{{game.title}}</a>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		{% block content %}
+		{% endblock %}
+
+		{% block scripts %}
+		{% endblock %}
+	</body>
+</html>
