@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+    - "8"
+script: npm run build
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github-token: $GITHUB_TOKEN
+    local_dir: dist
+    repo: Oisota/oisota.github.io/smash-bros-randomizer
+    target-branch: gh-pages
+    on:
+        branch: master
