@@ -11,7 +11,7 @@
 	<body>
 		<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-				<a class="navbar-item" href="/">Smash Bros Randomizer</a>
+				<a class="navbar-item" href="{{rootPath}}">Smash Bros Randomizer</a>
 				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
@@ -25,7 +25,7 @@
 						<a class="navbar-link">Games</a>
 						<div class="navbar-dropdown">
 							{% for game in collections.games %}
-							<a class="navbar-item" href="/{{game.path|safe}}">{{game.title}}</a>
+							<a class="navbar-item" href="{{rootPath}}{{game.path|safe}}">{{game.title}}</a>
 							{% endfor %}
 						</div>
 					</div>
@@ -36,7 +36,7 @@
 		{% block content %}
 		{% endblock %}
 
-		<script src="/js/navbar.js" charset="utf-8"></script>
+		<script src="{{rootPath}}js/navbar.js" charset="utf-8"></script>
 		{% block scripts %}
 		{% endblock %}
 	</body>

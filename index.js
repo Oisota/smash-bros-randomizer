@@ -6,7 +6,9 @@ const fileMetadata = require('metalsmith-filemetadata');
 const collections = require('metalsmith-collections');
 
 Metalsmith(__dirname)
-.metadata({})
+.metadata({
+	rootPath: process.env.NODE_ENV === 'production' ? '/smash-bros-randomizer/' : '/',
+})
 .source('src')
 .destination('dist')
 .clean(true)
