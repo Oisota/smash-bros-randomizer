@@ -8,7 +8,7 @@ const App = new Vue({
 		player2: '',
 		player3: '',
 		player4: '',
-		damageOptions: [50, 100, 200],
+		damageOptions: [50, 75, 100, 125, 150, 175, 200],
 		itemOptions: [
 			'none', 'none', 'none', 'none', 'none',
 			'very low', 'low', 'middle', 'high', 'very high'
